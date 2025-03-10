@@ -1,5 +1,4 @@
 let amigos = [];
-let amigoSecreto;
 
 function agregarAmigo() {
     var amigo = document.getElementById("amigo");
@@ -17,16 +16,16 @@ function agregarAmigo() {
             lista.innerText = amigos[i];
             listaAmigos.appendChild(lista);
         }
-        
     }
 }
 
 function sortearAmigo() {
-    amigoSecreto = Math.floor(Math.random()*amigos.length);
-    lista.innerText = amigos[i];
+    var amigoSecreto = document.getElementById("resultado");
+    var seleccionAleatoria = Math.floor(Math.random()*amigos.length);
+    if(amigos.length == 0) {
+        amigoSecreto.innerHTML = "Agrega a unos cuantos amigos"
+    } else {
+        amigoSecreto.innerHTML = "Te toco de amigo secreto a " + amigos[seleccionAleatoria];
     console.log(amigoSecreto);
-
-    
+    }
 }
-
-
